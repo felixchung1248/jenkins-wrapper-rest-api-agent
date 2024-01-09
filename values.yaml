@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: datamgmtdemo01.eastasia.cloudapp.azure.com:30003/demo_project_01/demo-golden
+  pullPolicy: IfNotPresent
+  tag: "27"
+
+service:
+  type: NodePort
+  port: 5000
+  nodePort: 30007 # Optional: Specify a nodePort in the range (30000-32767) if you want a specific port, otherwise it will be assigned by Kubernetes
+
+ingress:
+  enabled: false
+  # annotations, hosts, and other configurations go here
+
+resources: {}
+
+url: http://datamgmtdemo01.eastasia.cloudapp.azure.com:8080
