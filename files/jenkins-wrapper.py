@@ -61,7 +61,7 @@ def callJenkins():
     # You could handle different response status codes here with conditional statements...
     
     # Return the response content or handle it as needed
-    return response.json(), response.status_code
+    return response.text(), response.status_code
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
