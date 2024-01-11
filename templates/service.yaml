@@ -7,6 +7,5 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.targetPort }}
-      nodePort: {{ .Values.service.nodePort }}
   selector:
     app: {{ include "jenkins-wrapper.name" . }}

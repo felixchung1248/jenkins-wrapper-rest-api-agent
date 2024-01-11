@@ -6,13 +6,13 @@ image:
   tag: "latest"
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 5000
   targetPort: 5000
-  nodePort: 30007 # Optional: Specify a nodePort in the range (30000-32767) if you want a specific port, otherwise it will be assigned by Kubernetes
 
 ingress:
-  enabled: false
+  enabled: true
+  path-prefix: /run-jenkins
   # annotations, hosts, and other configurations go here
 
 resources: {}
