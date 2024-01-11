@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: datamgmtdemo01.eastasia.cloudapp.azure.com:30003/demo_project_01/demo-golden
+  repository: dataopennesscommunity/demo-golden
   pullPolicy: IfNotPresent
-  tag: "27"
+  tag: "latest"
 
 service:
   type: NodePort
