@@ -12,7 +12,7 @@ service:
 
 ingress:
   enabled: true
-  path-prefix: /run-jenkins
+  pathPrefix: /run-jenkins
   # annotations, hosts, and other configurations go here
 
 resources: {}
