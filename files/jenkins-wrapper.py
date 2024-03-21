@@ -21,7 +21,10 @@ def callJenkins():
     if not job_name:
         return jsonify({'error': 'Missing job_name parameter'}), 400
     
+    logging.info(f"Job name: {job_name}")
     post_params = request.json
+
+    logging.info(f"Params: {post_params}")
 
     # Get the Authorization header from the incoming request
     auth_header = request.headers.get('Authorization')
