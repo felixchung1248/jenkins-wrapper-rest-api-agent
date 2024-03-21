@@ -3,6 +3,7 @@ import requests
 import argparse
 from requests.auth import HTTPBasicAuth
 import base64
+import logging
 
 app = Flask(__name__)
 # Set up the argument parser
@@ -15,6 +16,7 @@ jenkins_url = args.jenkins_url
 
 @app.route('/run-jenkins', methods=['POST'])
 def callJenkins():
+    logging.info("Jenkins wrapper received a request")
     job_name = request.args.get('job_name')  # Get job_name from URL query parameter
     if not job_name:
         return jsonify({'error': 'Missing job_name parameter'}), 400
